@@ -78,11 +78,13 @@ Previously unobtainable items can be crafted. The user will use the `/craft` com
 
 ### Enhanced Item Uses
 
-Similar to the Gold tools, I wanted to enhance what some items can use. For example, the Milk Bucket is only used for crafting Cake in Beta 1.7.3 since brewing does not exist yet. Here are the ideas I came up with for this pugin:
+Similar to the Gold tools, I wanted to enhance what some items can use. For example, the Milk Bucket is only used for crafting Cake in Beta 1.7.3 since brewing does not exist yet. Here are the ideas I came up with for this plugin:
 - Milk Bucket: Drinking the milk bucket will give the player God mode for 5 seconds. This means they will not take any damage until the period expires (could possibily display block breaking particle packets to display that the user is in god mode)
 - Chainmail Armor: When the player has full chainmail armor equipped, they will be granted protection from Fire damage (Damage Causes of `FIRE`, `FIRE_TICK`, and `LAVA`)
 - Sugar: A player can right click with sugar in their hand, they will "eat" the sugar and be granted with suffocation protection for 3 seconds (Damage Causes of `SUFFOCATION` and `DROWNING`). This protection can be stacked. The player's protection time remaining will be shown to them when they consume sugar. A message will appear when the protection is over. (Useful for building underwater!)
-- Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed!
+- Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed! Server admins can also blacklist words so that users don't break server rules. Blacklisted words will appear as "*" characters.
+- Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5 second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
+- Dispenser Fireball: If Fire block is in the dispenser, the dispenser will shoot a fireball.
 
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
