@@ -31,6 +31,7 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 - Trapdoor* → 3 Planks (when a Gold Axe is used)
 - Sign → 6 Planks, 1 Stick (when a Gold Axe is used)
 - Redstone Repeater → 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
+- Double Stone Slab → 2 Stone Slabs (when a Gold Pickaxe is used) (Note: This is default behavior, but this plugin allows for Double Stone Slabs to be mined and retrieved in their crafted form. See #extended-crafting)
 
 Might have to test if possible:
 - Minecart → 5 Iron Ingots (when a Gold Pickaxe is used)
@@ -50,7 +51,6 @@ Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a fea
 - Lapis Ore Block (when a Gold Pickaxe is used)
 - Cobweb (when a Gold Sword is used)
 - Fern* (when a Gold Sword is used)
-- Double Stone Slab (when a Gold Pickaxe is used)
 - Bookshelf (when a Gold Axe is used)
 - Tiled Dirt (when a Gold Hoe is used)
 - Diamond Ore Block (when a Gold Pickaxe is used)
@@ -67,5 +67,24 @@ Might have to test if possible:
 
 **Exclusions:**
 - Spawners could be dropped, but unfortunately when a user places a spawner in Beta 1.7.3, it will always be a Pig Spawner.
+
+### Extended Crafting
+
+Previously unobtainable items can be crafted. The user will use the `/craft` command followed by the name of the item.
+- `doublestoneslab` will craft a Double Stone Slab, where the recipe is 2 Stone Slabs and 1 Clay. Note: Double Stone Slabs, when crafted, will also break as a Double Stone Slab with any Pickaxe. Breaking one with a Gold Pickaxe will break it into two Stone Slabs (you will not get the Clay back!)
+- `sponge` will craft a Sponge Block, where the recipe is 2 Yellow Wool, 2 Clay Blocks, a Water Bucket, and 4 Slimeballs (intentionally expensive!)
+- `mossycobble` will craft Mossy Cobblestone, where the user can craft 4 blocks minimum at a time, where the recipe is 4 Cobblestone, 2 Leaf Blocks, and 2 Slimeballs.
+- `fire` will craft Fire, where the recipe is 3 gunpowder, 3 Netherrack, 2 Glowstone Dust, and 1 Flint (Allows Chainmail Armor to be craftable!)
+
+### Enhanced Item Uses
+
+Similar to the Gold tools, I wanted to enhance what some items can use. For example, the Milk Bucket is only used for crafting Cake in Beta 1.7.3 since brewing does not exist yet. Here are the ideas I came up with for this pugin:
+- Milk Bucket: Drinking the milk bucket will give the player God mode for 5 seconds. This means they will not take any damage until the period expires (could possibily display block breaking particle packets to display that the user is in god mode)
+- Chainmail Armor: When the player has full chainmail armor equipped, they will be granted protection from Fire damage (Damage Causes of `FIRE`, `FIRE_TICK`, and `LAVA`)
+- Sugar: A player can right click with sugar in their hand, they will "eat" the sugar and be granted with suffocation protection for 3 seconds (Damage Causes of `SUFFOCATION` and `DROWNING`). This protection can be stacked. The player's protection time remaining will be shown to them when they consume sugar. A message will appear when the protection is over. (Useful for building underwater!)
+- Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed!
+
+### Other Enhancements
+- When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
 
 ## Demo
