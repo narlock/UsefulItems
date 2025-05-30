@@ -11,34 +11,61 @@ In my experience playing any version of Minecraft, I have rarely crafted tools w
 #### "Decrafters"
 
 Gold tools will now serve as "decrafters" in the sense that when they break a block that has been "crafted", a "decrafted" variant will be dropped instead of that block (with some reason, for example, we aren't going to shape a wood plank back into a log). The list includes:
-- Dispenser -> 7 Cobblestone, 1 Bow, 1 Redstone Dust (when a Gold Pickaxe is used)
-- Sandstone -> 4 Sand (when a Gold Pickaxe is used)
-- Noteblock -> 8 Planks, 1 Redstone Dust (when a Gold Axe is used)
-- Bed -> 3 Wool, 3 Planks (when a Gold Axe is used)
-- Sticky Piston -> 1 Piston, 1 Slimeball (when a Gold Axe is used)
-- Piston -> 3 Planks, 4 Cobblestone, 1 Iron Ingot, 1 Redstone Dust (when a Gold Axe is used)
-- Workbench -> 4 Planks (when a Gold Axe is used)
-- Furnace -> 8 Cobblestone (when a Gold Pickaxe is used)
-- Redstone Torch -> 1 Redstone Dust, 1 Stick (when a Gold Axe is used)
-- Door -> 6 Planks (when a Gold Axe is used)
-- Lever -> 1 Stick, 1 Cobblestone (when a Gold Axe is used)
-- Pressure Plate (Stone) -> 2 Stone (when a Gold Pickaxe is used)
-- Iron Door -> 6 Iron Ingots (when a Gold Pickaxe is used)
-- Pressure Plate (Wood) -> 2 Planks (when a Gold Axe is used)
-- Button -> 2 Stone (when a Gold Pickaxe is used)
-- Jukebox -> 8 Planks, 1 Diamond (when a Gold Axe is used)
-- Jack 'o' Lantern -> 1 Pumpkin, 1 Torch (when a Gold Axe is used)
-- Trapdoor* -> 3 Planks (when a Gold Axe is used)
-- Sign -> 6 Planks, 1 Stick (when a Gold Axe is used)
-- Redstone Repeater -> 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
+- Dispenser → 7 Cobblestone, 1 Bow, 1 Redstone Dust (when a Gold Pickaxe is used)
+- Sandstone → 4 Sand (when a Gold Pickaxe is used)
+- Noteblock → 8 Planks, 1 Redstone Dust (when a Gold Axe is used)
+- Bed → 3 Wool, 3 Planks (when a Gold Axe is used)
+- Sticky Piston → 1 Piston, 1 Slimeball (when a Gold Axe is used)
+- Piston → 3 Planks, 4 Cobblestone, 1 Iron Ingot, 1 Redstone Dust (when a Gold Axe is used)
+- Workbench → 4 Planks (when a Gold Axe is used)
+- Furnace → 8 Cobblestone (when a Gold Pickaxe is used)
+- Redstone Torch → 1 Redstone Dust, 1 Stick (when a Gold Axe is used)
+- Door → 6 Planks (when a Gold Axe is used)
+- Lever → 1 Stick, 1 Cobblestone (when a Gold Axe is used)
+- Pressure Plate (Stone) → 2 Stone (when a Gold Pickaxe is used)
+- Iron Door → 6 Iron Ingots (when a Gold Pickaxe is used)
+- Pressure Plate (Wood) → 2 Planks (when a Gold Axe is used)
+- Button → 2 Stone (when a Gold Pickaxe is used)
+- Jukebox → 8 Planks, 1 Diamond (when a Gold Axe is used)
+- Jack 'o' Lantern → 1 Pumpkin, 1 Torch (when a Gold Axe is used)
+- Trapdoor* → 3 Planks (when a Gold Axe is used)
+- Sign → 6 Planks, 1 Stick (when a Gold Axe is used)
+- Redstone Repeater → 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
 
 Might have to test if possible:
-- Minecart -> 5 Iron Ingots (when a Gold Pickaxe is used)
-- Painting -> 8 Sticks, 1 Wool (when a Gold Sword is used)
+- Minecart → 5 Iron Ingots (when a Gold Pickaxe is used)
+- Painting → 8 Sticks, 1 Wool (when a Gold Sword is used)
 
 **Exclusions:**
 1. Any craftable item that returns more than one of the crafted item. (ex: crafting torches with 1 stick and 1 coal will give 4 torches) *exception to this includes the trap door, as there is an even divisible amount for a trap door = 3 planks.
 2. Items where a "decraft" option is already available: Gold/Iron/Diamond blocks.
 2. Brick Blocks are excluded because there is nothing else in the game you can do with Bricks except for craft Brick Blocks.
+
+#### Silk Touch
+
+Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a feature server-side that allows Gold tools to also serve this purpose. The following items when mined with Gold tools will drop themselves:
+- Stone (when a Gold Pickaxe is used)
+- Coal Ore Block (when a Gold Pickaxe is used)
+- Glass (when a Gold Pickaxe is used)
+- Lapis Ore Block (when a Gold Pickaxe is used)
+- Cobweb (when a Gold Sword is used)
+- Fern* (when a Gold Sword is used)
+- Double Stone Slab (when a Gold Pickaxe is used)
+- Bookshelf (when a Gold Axe is used)
+- Tiled Dirt (when a Gold Hoe is used)
+- Diamond Ore Block (when a Gold Pickaxe is used)
+- Redstone Ore Block (when a Gold Pickaxe is used)
+- Snow Slab (when a Gold Shovel is used)
+- Ice Block (when a Gold Pickaxe is used)
+- Snow Block (when a Gold Shovel is used)
+- Glowstone (when a Gold Pickaxe is used)
+
+Might have to test if possible:
+- Boat (when a Gold Axe is used)
+
+*Due to the limitations of Beta 1.7.3, item ID 31 will only ever place a fern.
+
+**Exclusions:**
+- Spawners could be dropped, but unfortunately when a user places a spawner in Beta 1.7.3, it will always be a Pig Spawner.
 
 ## Demo
