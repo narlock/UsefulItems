@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: craftbukkit-1092-0f15ea67210f5e56ac6a23b7a714564654888e9f.ja
+ r
+
