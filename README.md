@@ -29,6 +29,7 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 - Jukebox → 8 Planks, 1 Diamond (when a Gold Axe is used)
 - Jack 'o' Lantern → 1 Pumpkin, 1 Torch (when a Gold Axe is used)
 - Trapdoor* → 3 Planks (when a Gold Axe is used)
+- Fence* → 3 Sticks (when a Gold Axe is used)
 - Sign → 6 Planks, 1 Stick (when a Gold Axe is used)
 - Redstone Repeater → 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
 - Double Stone Slab → 2 Stone Slabs (when a Gold Pickaxe is used) (Note: This is default behavior, but this plugin allows for Double Stone Slabs to be mined and retrieved in their crafted form. See #extended-crafting)
@@ -38,7 +39,7 @@ Might have to test if possible:
 - Painting → 8 Sticks, 1 Wool (when a Gold Sword is used)
 
 **Exclusions:**
-1. Any craftable item that returns more than one of the crafted item. (ex: crafting torches with 1 stick and 1 coal will give 4 torches) *exception to this includes the trap door, as there is an even divisible amount for a trap door = 3 planks.
+1. Any craftable item that returns more than one of the crafted item. (ex: crafting torches with 1 stick and 1 coal will give 4 torches) *exception to this includes the trap door, and fences as there is an even divisible amount for a trap door = 3 planks, and fence = 6 sticks.
 2. Items where a "decraft" option is already available: Gold/Iron/Diamond blocks.
 2. Brick Blocks are excluded because there is nothing else in the game you can do with Bricks except for craft Brick Blocks.
 
