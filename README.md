@@ -59,10 +59,10 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 - Diamond Block → 9 Diamonds (when a Gold Pickaxe is used)
 - Boat → 5 Planks (when a Gold Axe is used)
 - Minecart → 5 Iron Ingots (when a Gold Pickaxe is used)
-- Painting → 8 Sticks, 1 Wool (when a Gold Sword is used)
 
 **Exclusions:**
 1. Any craftable item that returns more than one of the crafted item. (ex: crafting torches with 1 stick and 1 coal will give 4 torches) *exception to this includes the trap door, and fences as there is an even divisible amount for a trap door = 3 planks, and fence = 6 sticks.
+2. Paintings are currently not included.
 
 #### Silk Touch
 

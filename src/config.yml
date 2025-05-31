@@ -39,7 +39,6 @@ decrafter-blocks:
   diamond_block: true
   boat: true
   minecart: true
-  painting: true
 
 # Enable or disable certain blocks for silktouch feature
 # Note: disabling silktouch in features.silktouch will disable all blocks!
