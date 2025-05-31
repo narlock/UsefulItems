@@ -2,10 +2,7 @@ package com.narlock.usefulitems;
 
 import com.narlock.usefulitems.commands.CraftCommand;
 import com.narlock.usefulitems.config.ConfigManager;
-import com.narlock.usefulitems.listeners.DecrafterListener;
-import com.narlock.usefulitems.listeners.DecrafterVehicleListener;
-import com.narlock.usefulitems.listeners.EnhancedBlockListener;
-import com.narlock.usefulitems.listeners.SilkTouchListener;
+import com.narlock.usefulitems.listeners.*;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -67,6 +64,8 @@ public class UsefulItems extends JavaPlugin {
         // Register enhanced block listener
         pluginManager.registerEvent(Event.Type.BLOCK_BREAK,
                 new EnhancedBlockListener(this), Event.Priority.Normal, this);
+        pluginManager.registerEvent(Event.Type.VEHICLE_DESTROY,
+                new EnhancedBoatListener(this), Event.Priority.Normal, this);
 
         logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " finished enabling.");
     }
