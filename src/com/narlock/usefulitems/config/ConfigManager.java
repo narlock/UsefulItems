@@ -105,8 +105,4 @@ public class ConfigManager {
     public boolean isBoatsDropBoatEnabled() {
         return config.getBoolean("boats-drop-boat", true);
     }
-
-    public boolean isDoubleStepDropDoubleStepEnabled() {
-        return config.getBoolean("doublestep-drop-doublestep", true);
-    }
 }

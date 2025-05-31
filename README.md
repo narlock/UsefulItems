@@ -52,7 +52,6 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 - Fence* → 3 Sticks (when a Gold Axe is used)
 - Sign → 6 Planks, 1 Stick (when a Gold Axe is used)
 - Redstone Repeater → 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
-- Double Stone Slab → 2 Stone Slabs, 1 Clay Ball (when a Gold Pickaxe is used)
 - Brick Block → 4 Bricks (when a Gold Pickaxe is used)
 - Gold Block → 9 Gold Ingots (when a Gold Pickaxe is used)
 - Iron Block → 9 Iron Ingots (when a Gold Pickaxe is used)
@@ -107,7 +106,6 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
 - When boats are broken, they will drop the boat item instead of breaking into planks and sticks.
-- When double stone slabs are broken, they will drop the actual double stone slab block when broken with any Pickaxe (excluding Gold Pickaxe if decrafting is enabled).
 
 ## Demo
 

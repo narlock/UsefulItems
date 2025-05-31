@@ -32,7 +32,6 @@ decrafter-blocks:
   wall_sign: true
   redstone_repeater_off: true
   redstone_repeater_on: true
-  double_stone_slab: true
   brick_block: true
   gold_block: true
   iron_block: true
@@ -78,4 +77,3 @@ enhanceditems:
 # Other Enhancements
 stairs-drop-stairs: true
 boats-drop-boat: true
-doublestep-drop-doublestep: true

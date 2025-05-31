@@ -162,9 +162,6 @@ public class DecrafterListener extends BlockListener {
                 new ItemStack(Material.STONE, 3),
                 new ItemStack(Material.REDSTONE_TORCH_ON, 2),
                 new ItemStack(Material.REDSTONE, 1))); // Redstone Repeater (on)
-        decraftRules.put(43, new DecraftRule(GoldToolType.GOLD_PICKAXE,
-                new ItemStack(Material.STEP, 2),
-                new ItemStack(Material.CLAY_BALL, 1))); // Double Stone Slab
         decraftRules.put(45, new DecraftRule(GoldToolType.GOLD_PICKAXE,
                 new ItemStack(Material.CLAY_BRICK, 4))); // Brick Block
         decraftRules.put(41, new DecraftRule(GoldToolType.GOLD_PICKAXE,

@@ -38,7 +38,6 @@ public class Utils {
         BLOCK_NAME_TO_ID.put("wall_sign", 68);
         BLOCK_NAME_TO_ID.put("redstone_repeater_off", 93);
         BLOCK_NAME_TO_ID.put("redstone_repeater_on", 94);
-        BLOCK_NAME_TO_ID.put("double_stone_slab", 43);
         BLOCK_NAME_TO_ID.put("brick_block", 45);
         BLOCK_NAME_TO_ID.put("gold_block", 41);
         BLOCK_NAME_TO_ID.put("iron_block", 42);

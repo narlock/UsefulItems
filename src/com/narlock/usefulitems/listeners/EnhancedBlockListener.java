@@ -64,7 +64,6 @@ public class EnhancedBlockListener extends BlockListener {
 
     public void initializeEnhancedBlockRules() {
         enhancedBlockRules.put(67, PICKAXE_TOOL_IDS); // Cobble stairs
-        enhancedBlockRules.put(43, PICKAXE_TOOL_IDS); // Double step
     }
 
     public boolean isEnhancedBlockBreakDisabled(int blockId, int heldItemId, List<Integer> tools) {
@@ -79,18 +78,6 @@ public class EnhancedBlockListener extends BlockListener {
                 }
 
                 return !plugin.getConfigManager().isStairsDropStairsEnabled();
-            case 43:
-                // Double Steps
-                if (tools == null || !tools.contains(heldItemId)) {
-                    return true;
-                }
-
-                if (heldItemId == GOLD_PICKAXE.getId()) {
-                    // Handle potential conflict with decrafting, favor decrafting if it is enabled
-                    return !plugin.getConfigManager().isDoubleStepDropDoubleStepEnabled()
-                            && !plugin.getConfigManager().getRawConfig()
-                            .getBoolean("decrafter-blocks.double_stone_slab", true);
-                } else return !plugin.getConfigManager().isDoubleStepDropDoubleStepEnabled();
             default:
                 return true;
         }
