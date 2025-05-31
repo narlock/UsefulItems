@@ -88,6 +88,10 @@ Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a fea
 - Spawners could be dropped, but unfortunately when a user places a spawner in Beta 1.7.3, it will always be a Pig Spawner.
 - Ferns and Tall Grass also suffer a similar case. When a player holds the item, it will always place a fern. Meaning if someone silk touched a piece of tall grass, it would place as a fern.
 
+<p align="center">
+  <img src="/demo/silktouch_demo.gif" alt="Silk Touch Demo">
+</p>
+
 ### Extended Crafting
 
 Previously unobtainable items can be crafted. The user will use the `/craft` command followed by the name of the item.
@@ -97,22 +101,36 @@ Previously unobtainable items can be crafted. The user will use the `/craft` com
 - `fire` will craft Fire, where the recipe is 3 gunpowder, 3 Netherrack, 2 Glowstone Dust, and 1 Flint (Allows Chainmail Armor to be craftable!)
 - `cobweb` will craft Cobweb, where the recipe is 9 string.
 
+<p align="center">
+  <img src="/demo/craft_demo.gif" alt="Extended Crafting Demo">
+</p>
+
 ### Enhanced Item Uses
 
 Similar to the Gold tools, I wanted to enhance what some items can use. For example, the Milk Bucket is only used for crafting Cake in Beta 1.7.3 since brewing does not exist yet. Here are the ideas I came up with for this plugin:
 - Milk Bucket: Drinking the milk bucket will give the player God mode for 5 seconds. This means they will not take any damage until the period expires (could possibily display block breaking particle packets to display that the user is in god mode)
+
+<p align="center">
+  <img src="/demo/milk_god_mode_demo.gif" alt="Milk God Mode Demo">
+</p>
+
 - Chainmail Armor: When the player has full chainmail armor equipped, they will be granted protection from Fire damage (Damage Causes of `FIRE`, `FIRE_TICK`, and `LAVA`)
+
+<p align="center">
+  <img src="/demo/chain_fire_res_demo.gif" alt="Chain Armor Fire Resistance Demo">
+</p>
+
 - Sugar: A player can right-click with sugar in their hand, they will "eat" the sugar and be granted with suffocation protection for 3 seconds (Damage Causes of `SUFFOCATION` and `DROWNING`). This protection can be stacked. The player's protection time remaining will be shown to them when they consume sugar. A message will appear when the protection is over. (Useful for building underwater!)
+
+<p align="center">
+  <img src="/demo/sugar_suffocation_res_demo.gif" alt="Sugar Suffocation Protection Demo">
+</p>
+
 - Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed! Server admins can also blacklist words so that users don't break server rules. Blacklisted words will appear as "*" characters.
 - Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
 - Dispenser Fireball: If Fire block is in the dispenser, the dispenser will shoot a fireball.
 
 ### Other Enhancements
-- When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
+- When stairs are broken, they will drop the actual stair block. Stone stairs will only drop when using a Pickaxe.
 - When boats are broken, they will drop the boat item instead of breaking into planks and sticks.
 - Option to stop ice from melting (since they can be obtained and used in builds).
-
-## Demo
-
-> [!WARNING]
-> This section is currently in-progress!
