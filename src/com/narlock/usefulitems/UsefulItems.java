@@ -4,6 +4,7 @@ import com.narlock.usefulitems.commands.CraftCommand;
 import com.narlock.usefulitems.commands.ReloadCommand;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.*;
+import com.narlock.usefulitems.util.ProtectionManager;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,6 +21,7 @@ import static com.narlock.usefulitems.util.Utils.TITLE;
 public class UsefulItems extends JavaPlugin {
     private static final Logger logger = Logger.getLogger("Minecraft.UsefulItems");
     private ConfigManager configManager;
+    private ProtectionManager protectionManager;
 
     @Override
     public void onEnable() {
@@ -60,9 +62,16 @@ public class UsefulItems extends JavaPlugin {
             logger.warning(TITLE + "Extended Crafting Feature is disabled.");
         }
 
-        // TODO Register Enhanced Item Listener
+        // Register Enhanced Item Listener
+        if(configManager.isFeatureEnabled("enhancedItems")) {
+            this.protectionManager = new ProtectionManager(this);
+            pluginManager.registerEvent(Event.Type.PLAYER_INTERACT,
+                    new EnhancedItemPlayerListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(Event.Type.ENTITY_DAMAGE,
+                    new EnhancedItemDamageListener(this), Event.Priority.Normal, this);
+        }
 
-        // Register enhanced block listener
+        // Register Enhanced Block listener
         pluginManager.registerEvent(Event.Type.BLOCK_BREAK,
                 new EnhancedBlockListener(this), Event.Priority.Normal, this);
         pluginManager.registerEvent(Event.Type.VEHICLE_DESTROY,
@@ -81,5 +90,9 @@ public class UsefulItems extends JavaPlugin {
 
     public ConfigManager getConfigManager() {
         return configManager;
+    }
+
+    public ProtectionManager getProtectionManager() {
+        return protectionManager;
     }
 }

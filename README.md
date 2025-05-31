@@ -22,8 +22,8 @@ Upon reload/restart, you will see a message similar to this in your server's log
 ```
 To verify installation, check that "UsefulItems" appears in your plugins list by using the `/plugins` command while in-game.
 
-## Modifications
-This plugin contains lots of modifications to give more purpose to different items in the game. It also adds some level of enhancements. All settings for this plugin can be toggled in the `config.yml` that lies in the data folder.
+## Features
+This plugin contains features to give more purpose to different items in the game. It also adds some level of enhancements. All settings for this plugin can be toggled in the `config.yml` that lies in the data folder.
 
 ### Golden Tools
 In my experience playing any version of Minecraft, I have rarely crafted tools with Gold. The main reason for this is that they break easily and provide little value when compared to even the cheaper, Stone pickaxe. That and Iron and Diamond tools are usually the preferred anyways. This plugin hopes to provide special abilities to these tools, encouraging players to craft them, despite their durability remaining the same.
