@@ -61,7 +61,9 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 
 **Exclusions:**
 1. Any craftable item that returns more than one of the crafted item. (ex: crafting torches with 1 stick and 1 coal will give 4 torches) *exception to this includes the trap door, and fences as there is an even divisible amount for a trap door = 3 planks, and fence = 6 sticks.
-2. Paintings are currently not included.
+2. Paintings are currently not included...(yet?)
+
+![Decraft Demo](/demo/decraft_demo.gif)
 
 #### Silk Touch
 
