@@ -47,7 +47,6 @@ public class Utils {
         BLOCK_NAME_TO_ID.put("glass", 20);
         BLOCK_NAME_TO_ID.put("lapis_ore", 21);
         BLOCK_NAME_TO_ID.put("cobweb", 30);
-        BLOCK_NAME_TO_ID.put("fern", 31);
         BLOCK_NAME_TO_ID.put("bookshelf", 47);
         BLOCK_NAME_TO_ID.put("tilled_dirt", 60);
         BLOCK_NAME_TO_ID.put("diamond_ore", 56);

@@ -72,7 +72,6 @@ Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a fea
 - Glass (when a Gold Pickaxe is used)
 - Lapis Ore Block (when a Gold Pickaxe is used)
 - Cobweb (when a Gold Sword is used)
-- Fern* (when a Gold Sword is used)
 - Bookshelf (when a Gold Axe is used)
 - Tiled Dirt (when a Gold Hoe is used)
 - Diamond Ore Block (when a Gold Pickaxe is used)
@@ -82,10 +81,9 @@ Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a fea
 - Snow Block (when a Gold Shovel is used)
 - Glowstone (when a Gold Pickaxe is used)
 
-*Due to the limitations of Beta 1.7.3, item ID 31 will only ever place a fern.
-
 **Exclusions:**
 - Spawners could be dropped, but unfortunately when a user places a spawner in Beta 1.7.3, it will always be a Pig Spawner.
+- Ferns and Tall Grass also suffer a similar case. When a player holds the item, it will always place a fern. Meaning if someone silk touched a piece of tall grass, it would place as a fern.
 
 ### Extended Crafting
 

@@ -48,7 +48,6 @@ silktouch-blocks:
   glass: true
   lapis_ore: true
   cobweb: true
-  fern: true
   bookshelf: true
   tilled_dirt: true
   diamond_ore: true

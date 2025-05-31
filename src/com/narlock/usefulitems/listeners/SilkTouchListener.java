@@ -74,7 +74,6 @@ public class SilkTouchListener extends BlockListener {
         silkTouchRules.put(20, GoldToolType.GOLD_PICKAXE); // Glass
         silkTouchRules.put(21, GoldToolType.GOLD_PICKAXE); // Lapis Ore
         silkTouchRules.put(30, GoldToolType.GOLD_SWORD); // Cobweb
-        silkTouchRules.put(31, GoldToolType.GOLD_SWORD); // Fern
         silkTouchRules.put(47, GoldToolType.GOLD_AXE); // Bookshelf
         silkTouchRules.put(60, GoldToolType.GOLD_HOE); // Tilled Dirt
         silkTouchRules.put(56, GoldToolType.GOLD_PICKAXE); // Diamond Ore
