@@ -57,5 +57,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 
+META-INF/
 src/META-INF/
 UsefulItems.iml

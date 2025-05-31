@@ -1,3 +1,4 @@
+# For details on these settings, visit https://github.com/narlock/UsefulItems
 # Enable or disable features of this plugin
 features:
   decrafter: true
@@ -32,8 +33,13 @@ decrafter-blocks:
   redstone_repeater_off: true
   redstone_repeater_on: true
   double_stone_slab: true
+  brick_block: true
+  gold_block: true
+  iron_block: true
+  diamond_block: true
   boat: true
   minecart: true
+  painting: true
 
 # Enable or disable certain blocks for silktouch feature
 # Note: disabling silktouch in features.silktouch will disable all blocks!
@@ -61,7 +67,7 @@ extendedcrafting:
   mossycobble: true
   fire: true
 
-# Configure enhanced item time rates
+# Configure enhanced items
 enhanceditems:
   milkbucket:
     godmode-duration: 5  # seconds
@@ -69,3 +75,7 @@ enhanceditems:
     suffocation-duration: 3  # seconds (per sugar use)
   fireball:
     cooldown: 5  # seconds
+
+# Other Enhancements
+stairs-drop-stairs: true
+boats-drop-boat: true

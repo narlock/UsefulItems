@@ -100,7 +100,7 @@ public class DecrafterListener extends BlockListener {
     public enum GoldToolType {
         GOLD_PICKAXE(285),
         GOLD_AXE(286),
-        GOLD_SPADE(284),
+        GOLD_SHOVEL(284),
         GOLD_HOE(294),
         GOLD_SWORD(283);
 
@@ -186,5 +186,13 @@ public class DecrafterListener extends BlockListener {
                 new ItemStack(Material.REDSTONE, 1))); // Redstone Repeater (on)
         decraftRules.put(43, new DecraftRule(GoldToolType.GOLD_PICKAXE,
                 new ItemStack(Material.STEP, 2))); // Double Stone Slab
+        decraftRules.put(45, new DecraftRule(GoldToolType.GOLD_PICKAXE,
+                new ItemStack(Material.CLAY_BRICK, 4))); // Brick Block
+        decraftRules.put(41, new DecraftRule(GoldToolType.GOLD_PICKAXE,
+                new ItemStack(Material.GOLD_INGOT, 9))); // Gold Block
+        decraftRules.put(42, new DecraftRule(GoldToolType.GOLD_PICKAXE,
+                new ItemStack(Material.IRON_INGOT, 9))); // Iron Block
+        decraftRules.put(57, new DecraftRule(GoldToolType.GOLD_PICKAXE,
+                new ItemStack(Material.DIAMOND, 9))); // Diamond Block
     }
 }

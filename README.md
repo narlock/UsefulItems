@@ -23,6 +23,7 @@ Upon reload/restart, you will see a message similar to this in your server's log
 To verify installation, check that "UsefulItems" appears in your plugins list by using the `/plugins` command while in-game.
 
 ## Modifications
+This plugin contains lots of modifications to give more purpose to different items in the game. It also adds some level of enhancements. All settings for this plugin can be toggled in the `config.yml` that lies in the data folder.
 
 ### Golden Tools
 In my experience playing any version of Minecraft, I have rarely crafted tools with Gold. The main reason for this is that they break easily and provide little value when compared to even the cheaper, Stone pickaxe. That and Iron and Diamond tools are usually the preferred anyways. This plugin hopes to provide special abilities to these tools, encouraging players to craft them, despite their durability remaining the same.
@@ -52,15 +53,16 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 - Sign → 6 Planks, 1 Stick (when a Gold Axe is used)
 - Redstone Repeater → 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
 - Double Stone Slab → 2 Stone Slabs (when a Gold Pickaxe is used) (Note: This is default behavior, but this plugin allows for Double Stone Slabs to be mined and retrieved in their crafted form. See #extended-crafting)
-
-Might have to test if possible:
+- Brick Block → 4 Bricks (when a Gold Pickaxe is used)
+- Gold Block → 9 Gold Ingots (when a Gold Pickaxe is used)
+- Iron Block → 9 Iron Ingots (when a Gold Pickaxe is used)
+- Diamond Block → 9 Diamonds (when a Gold Pickaxe is used)
+- Boat → 5 Planks (when a Gold Axe is used)
 - Minecart → 5 Iron Ingots (when a Gold Pickaxe is used)
 - Painting → 8 Sticks, 1 Wool (when a Gold Sword is used)
 
 **Exclusions:**
 1. Any craftable item that returns more than one of the crafted item. (ex: crafting torches with 1 stick and 1 coal will give 4 torches) *exception to this includes the trap door, and fences as there is an even divisible amount for a trap door = 3 planks, and fence = 6 sticks.
-2. Items where a "decraft" option is already available: Gold/Iron/Diamond blocks.
-2. Brick Blocks are excluded because there is nothing else in the game you can do with Bricks except for craft Brick Blocks.
 
 #### Silk Touch
 
@@ -79,9 +81,6 @@ Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a fea
 - Ice Block (when a Gold Pickaxe is used)
 - Snow Block (when a Gold Shovel is used)
 - Glowstone (when a Gold Pickaxe is used)
-
-Might have to test if possible:
-- Boat (when a Gold Axe is used)
 
 *Due to the limitations of Beta 1.7.3, item ID 31 will only ever place a fern.
 
@@ -108,6 +107,7 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
 
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
+- When boats are broken, they will drop the boat item instead of breaking into planks and sticks.
 
 ## Demo
 
