@@ -126,10 +126,10 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
   <img src="/demo/sugar_suffocation_res_demo.gif" alt="Sugar Suffocation Protection Demo">
 </p>
 
-- Feather: A player can right-click with feathers in their hand, they will "use" the feather and be granted with fall-damage protection for 2 seconds. This protection can be stacked. The player's protection time remaining will be shown to them when they use feathers. A message will appear when the protection is over. (Useful for deep falls!)
-- Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed! Server admins can also blacklist words so that users don't break server rules. Blacklisted words will appear as "*" characters.
-- Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
-- Dispenser Fireball: If Fire block is in the dispenser, the dispenser will shoot a fireball.
+- (Not Implemented) Feather: A player can right-click with feathers in their hand, they will "use" the feather and be granted with fall-damage protection for 2 seconds. This protection can be stacked. The player's protection time remaining will be shown to them when they use feathers. A message will appear when the protection is over. (Useful for deep falls!)
+- (Not Implemented) Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed! Server admins can also blacklist words so that users don't break server rules. Blacklisted words will appear as "*" characters.
+- (Not Implemented) Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
+- (Not Implemented) Dispenser Fireball: If Fire block is in the dispenser, the dispenser will shoot a fireball.
 
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block. Stone stairs will only drop when using a Pickaxe.
