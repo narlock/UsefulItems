@@ -52,7 +52,7 @@ Gold tools will now serve as "decrafters" in the sense that when they break a bl
 - Fence* → 3 Sticks (when a Gold Axe is used)
 - Sign → 6 Planks, 1 Stick (when a Gold Axe is used)
 - Redstone Repeater → 3 Stone, 2 Redstone Torches, 1 Redstone Dust (when a Gold Pickaxe is used)
-- Double Stone Slab → 2 Stone Slabs (when a Gold Pickaxe is used) (Note: This is default behavior, but this plugin allows for Double Stone Slabs to be mined and retrieved in their crafted form. See #extended-crafting)
+- Double Stone Slab → 2 Stone Slabs, 1 Clay Ball (when a Gold Pickaxe is used)
 - Brick Block → 4 Bricks (when a Gold Pickaxe is used)
 - Gold Block → 9 Gold Ingots (when a Gold Pickaxe is used)
 - Iron Block → 9 Iron Ingots (when a Gold Pickaxe is used)
@@ -90,7 +90,7 @@ Enchantments don't exist in Beta 1.7.3, but that doesn't mean we can't add a fea
 ### Extended Crafting
 
 Previously unobtainable items can be crafted. The user will use the `/craft` command followed by the name of the item.
-- `doublestoneslab` will craft a Double Stone Slab, where the recipe is 2 Stone Slabs and 1 Clay. Note: Double Stone Slabs, when crafted, will also break as a Double Stone Slab with any Pickaxe. Breaking one with a Gold Pickaxe will break it into two Stone Slabs (you will not get the Clay back!)
+- `doublestoneslab` will craft a Double Stone Slab, where the recipe is 2 Stone Slabs and 1 Clay Ball.
 - `sponge` will craft a Sponge Block, where the recipe is 2 Yellow Wool, 2 Clay Blocks, a Water Bucket, and 4 Slimeballs (intentionally expensive!)
 - `mossycobble` will craft Mossy Cobblestone, where the user can craft 4 blocks minimum at a time, where the recipe is 4 Cobblestone, 2 Leaf Blocks, and 2 Slimeballs.
 - `fire` will craft Fire, where the recipe is 3 gunpowder, 3 Netherrack, 2 Glowstone Dust, and 1 Flint (Allows Chainmail Armor to be craftable!)
@@ -109,6 +109,7 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
 - When boats are broken, they will drop the boat item instead of breaking into planks and sticks.
+- When double stone slabs are broken, they will drop the actual double stone slab block when broken with any Pickaxe (excluding Gold Pickaxe if decrafting is enabled).
 
 ## Demo
 

@@ -1,5 +1,6 @@
 package com.narlock.usefulitems;
 
+import com.narlock.usefulitems.commands.CraftCommand;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.DecrafterListener;
 import com.narlock.usefulitems.listeners.DecrafterVehicleListener;
@@ -50,6 +51,14 @@ public class UsefulItems extends JavaPlugin {
             logger.info(TITLE + "Silk Touch Feature enabled.");
         } else {
             logger.warning(TITLE + "Silk Touch Features is disabled.");
+        }
+
+        // Register /craft command executor
+        if (configManager.isFeatureEnabled("extendedcrafting")) {
+            getCommand("craft").setExecutor(new CraftCommand(this));
+            logger.info(TITLE + "Extended Crafting Feature enabled.");
+        } else {
+            logger.warning(TITLE + "Extended Crafting Feature is disabled.");
         }
 
         logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " finished enabling.");

@@ -61,6 +61,7 @@ silktouch-blocks:
 # Enable or disable certain blocks for crafting
 # Note: disabling extendedcrafting in features.extendedcrafting will disable all blocks!
 extendedcrafting:
+  cobweb: true
   doublestoneslab: true
   sponge: true
   mossycobble: true
