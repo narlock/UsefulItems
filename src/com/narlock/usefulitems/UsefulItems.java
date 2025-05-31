@@ -1,6 +1,7 @@
 package com.narlock.usefulitems;
 
 import com.narlock.usefulitems.commands.CraftCommand;
+import com.narlock.usefulitems.commands.ReloadCommand;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.*;
 import org.bukkit.event.Event;
@@ -66,6 +67,9 @@ public class UsefulItems extends JavaPlugin {
                 new EnhancedBlockListener(this), Event.Priority.Normal, this);
         pluginManager.registerEvent(Event.Type.VEHICLE_DESTROY,
                 new EnhancedBoatListener(this), Event.Priority.Normal, this);
+
+        // Register /reloadusefulitems
+        getCommand("reloadusefulitems").setExecutor(new ReloadCommand(this));
 
         logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " finished enabling.");
     }
