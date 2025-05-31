@@ -106,6 +106,7 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
 - When boats are broken, they will drop the boat item instead of breaking into planks and sticks.
+- Option to stop ice from melting (since they can be obtained and used in builds).
 
 ## Demo
 

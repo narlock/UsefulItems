@@ -77,3 +77,4 @@ enhanceditems:
 # Other Enhancements
 stairs-drop-stairs: true
 boats-drop-boat: true
+stop-ice-melt: true

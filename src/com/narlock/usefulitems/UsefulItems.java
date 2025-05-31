@@ -76,6 +76,8 @@ public class UsefulItems extends JavaPlugin {
                 new EnhancedBlockListener(this), Event.Priority.Normal, this);
         pluginManager.registerEvent(Event.Type.VEHICLE_DESTROY,
                 new EnhancedBoatListener(this), Event.Priority.Normal, this);
+        pluginManager.registerEvent(Event.Type.BLOCK_FADE,
+                new StopIceMeltListener(this), Event.Priority.Normal, this);
 
         // Register /reloadusefulitems
         getCommand("reloadusefulitems").setExecutor(new ReloadCommand(this));

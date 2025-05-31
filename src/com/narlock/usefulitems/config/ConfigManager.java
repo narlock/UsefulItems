@@ -105,4 +105,8 @@ public class ConfigManager {
     public boolean isBoatsDropBoatEnabled() {
         return config.getBoolean("boats-drop-boat", true);
     }
+
+    public boolean isStopIceMelt() {
+        return config.getBoolean("stop-ice-melt", true);
+    }
 }
