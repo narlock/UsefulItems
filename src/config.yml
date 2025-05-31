@@ -8,48 +8,48 @@ features:
 # Enable or disable certain blocks for decrafter feature
 # Note: disabling decrafter in features.decrafter will disable all blocks!
 decrafter-blocks:
-  23: true   # Dispenser
-  24: true   # Sandstone
-  25: true   # Noteblock
-  26: true   # Bed
-  29: true   # Sticky Piston
-  33: true   # Piston
-  58: true   # Workbench
-  61: true   # Furnace
-  76: true   # Redstone Torch
-  64: true   # Wooden Door
-  69: true   # Lever
-  70: true   # Stone Pressure Plate
-  71: true   # Iron Door
-  72: true   # Wooden Pressure Plate
-  77: true   # Stone Button
-  84: true   # Jukebox
-  91: true   # Jack o' Lantern
-  96: true   # Trapdoor
-  85: true   # Fence
-  63: true   # Sign Post
-  68: true   # Wall Sign
-  93: true   # Redstone Repeater (off)
-  94: true   # Redstone Repeater (on)
-  43: true   # Double Stone Slab
+  dispenser: false
+  sandstone: true
+  noteblock: true
+  bed: true
+  sticky_piston: true
+  piston: true
+  workbench: true
+  furnace: true
+  redstone_torch: true
+  wooden_door: true
+  lever: true
+  stone_pressure_plate: true
+  iron_door: true
+  wooden_pressure_plate: true
+  stone_button: true
+  jukebox: true
+  jack_o_lantern: true
+  trapdoor: true
+  fence: true
+  sign_post: true
+  wall_sign: true
+  redstone_repeater_off: true
+  redstone_repeater_on: true
+  double_stone_slab: true
 
 # Enable or disable certain blocks for silktouch feature
-# Note: disabling decrafter in features.silktouch will disable all blocks!
+# Note: disabling silktouch in features.silktouch will disable all blocks!
 silktouch-blocks:
-  1: true    # Stone
-  16: true   # Coal Ore
-  20: true   # Glass
-  21: true   # Lapis Ore
-  30: true   # Cobweb
-  31: true   # Fern (Beta ID always maps to 31)
-  47: true   # Bookshelf
-  60: true   # Tilled Dirt
-  56: true   # Diamond Ore
-  73: true   # Redstone Ore
-  78: true   # Snow Layer (slab)
-  79: true   # Ice
-  80: true   # Snow Block
-  89: true   # Glowstone
+  stone: true
+  coal_ore: true
+  glass: true
+  lapis_ore: true
+  cobweb: true
+  fern: true
+  bookshelf: true
+  tilled_dirt: true
+  diamond_ore: true
+  redstone_ore: true
+  snow_layer: true
+  ice: true
+  snow_block: true
+  glowstone: true
 
 # Enable or disable certain blocks for crafting
 # Note: disabling extendedcrafting in features.extendedcrafting will disable all blocks!

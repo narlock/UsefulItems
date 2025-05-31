@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.logging.Logger;
 
+import static com.narlock.usefulitems.util.Constants.BLOCK_NAME_BY_ID;
 import static com.narlock.usefulitems.util.Constants.TITLE;
 
 /**
@@ -76,12 +77,16 @@ public class ConfigManager {
 
     public boolean isDecrafterBlockEnabled(int blockId) {
         if (!isFeatureEnabled("decrafter")) return false;
-        return config.getBoolean("decrafter-blocks." + blockId, true);
+        String blockName = BLOCK_NAME_BY_ID(blockId);
+        if (blockName == null) return false;
+        return config.getBoolean("decrafter-blocks." + blockName, true);
     }
 
     public boolean isSilkTouchBlockEnabled(int blockId) {
         if (!isFeatureEnabled("silktouch")) return false;
-        return config.getBoolean("silktouch-blocks." + blockId, true);
+        String blockName = BLOCK_NAME_BY_ID(blockId);
+        if (blockName == null) return false;
+        return config.getBoolean("silktouch-blocks." + blockName, true);
     }
 
     public boolean isExtendedCraftingEnabled(String itemKey) {

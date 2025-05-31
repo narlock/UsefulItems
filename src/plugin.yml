@@ -2,13 +2,40 @@ name: UsefulItems
 main: com.narlock.usefulitems.UsefulItems
 version: 1.0
 author: narlock
-description: Gives use to some of the less useful items
+description: Gives use to some of the less useful items.
+
 commands:
   craft:
     description: Craft previously unobtainable items using special recipes.
     usage: /<command> <item>
     permission: usefulitems.craft
+
   reloadusefulitems:
     description: Reload the UsefulItems plugin configuration.
     usage: /<command>
     permission: usefulitems.reload
+
+permissions:
+  usefulitems.craft:
+    description: Allows the player to use the /craft command.
+    default: true
+
+  usefulitems.reload:
+    description: Allows reloading the UsefulItems configuration.
+    default: op
+
+  usefulitems.decrafter:
+    description: Allows the player to use decrafting features with gold tools.
+    default: true
+
+  usefulitems.silktouch:
+    description: Allows the player to use silk touch effects with gold tools.
+    default: true
+
+  usefulitems.extendedcrafting:
+    description: Allows the player to access extended crafting recipes.
+    default: true
+
+  usefulitems.enhanceditems:
+    description: Allows the player to use enhanced item effects (e.g., milkbucket god mode, sugar breathing).
+    default: true

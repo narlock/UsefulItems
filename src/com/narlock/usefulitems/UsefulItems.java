@@ -32,18 +32,22 @@ public class UsefulItems extends JavaPlugin {
 
         // Register decrafter feature if enabled
         if (configManager.isFeatureEnabled("decrafter")) {
-//            pluginManager.registerEvent(
-//                    Event.Type.BLOCK_BREAK, new DecrafterListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(
+                    Event.Type.BLOCK_BREAK, new DecrafterListener(this), Event.Priority.Normal, this);
             logger.info(TITLE + "Decrafter Feature enabled.");
         } else {
             logger.warning(TITLE + "Decrafter Feature is disabled.");
         }
 
-        logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " enabled.");
+        logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " finished enabling.");
     }
 
     @Override
     public void onDisable() {
         logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " disabled.");
+    }
+
+    public ConfigManager getConfigManager() {
+        return configManager;
     }
 }
