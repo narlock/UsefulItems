@@ -4,6 +4,7 @@ import com.narlock.usefulitems.commands.CraftCommand;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.DecrafterListener;
 import com.narlock.usefulitems.listeners.DecrafterVehicleListener;
+import com.narlock.usefulitems.listeners.EnhancedBlockListener;
 import com.narlock.usefulitems.listeners.SilkTouchListener;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
@@ -60,6 +61,12 @@ public class UsefulItems extends JavaPlugin {
         } else {
             logger.warning(TITLE + "Extended Crafting Feature is disabled.");
         }
+
+        // TODO Register Enhanced Item Listener
+
+        // Register enhanced block listener
+        pluginManager.registerEvent(Event.Type.BLOCK_BREAK,
+                new EnhancedBlockListener(this), Event.Priority.Normal, this);
 
         logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " finished enabling.");
     }

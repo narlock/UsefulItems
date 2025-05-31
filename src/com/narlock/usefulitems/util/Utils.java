@@ -1,9 +1,12 @@
 package com.narlock.usefulitems.util;
 
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Utils {
@@ -96,5 +99,19 @@ public class Utils {
             heldItem.setDurability(newDurability);
             player.setItemInHand(heldItem);
         }
+    }
+
+    public static final List<Integer> PICKAXE_TOOL_IDS = Arrays.asList(257, 270, 274, 278, 285);
+
+    public static boolean isTool(ItemStack item) {
+        if (item == null) return false;
+
+        Material type = item.getType();
+
+        return type.name().endsWith("_PICKAXE")
+                || type.name().endsWith("_AXE")
+                || type.name().endsWith("_SHOVEL")
+                || type.name().endsWith("_SWORD")
+                || type.name().endsWith("_HOE");
     }
 }

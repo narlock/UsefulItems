@@ -97,4 +97,16 @@ public class ConfigManager {
     public int getEnhancedItemSetting(String itemKey, String settingKey, int defaultValue) {
         return config.getInt("enhanceditems." + itemKey + "." + settingKey, defaultValue);
     }
+
+    public boolean isStairsDropStairsEnabled() {
+        return config.getBoolean("stairs-drop-stairs", true);
+    }
+
+    public boolean isBoatsDropBoatEnabled() {
+        return config.getBoolean("boats-drop-boat", true);
+    }
+
+    public boolean isDoubleStepDropDoubleStepEnabled() {
+        return config.getBoolean("doublestep-drop-doublestep", true);
+    }
 }
