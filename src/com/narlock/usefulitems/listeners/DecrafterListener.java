@@ -12,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.narlock.usefulitems.util.Utils.applyToolDurability;
+
 /**
  * Handles gold tool decrafting
  *
@@ -65,16 +67,6 @@ public class DecrafterListener extends BlockListener {
 
         // Damage or break tool
         applyToolDurability(player, heldItem);
-    }
-
-    public void applyToolDurability(Player player, ItemStack heldItem) {
-        short newDurability = (short) (heldItem.getDurability() + 1);
-        if (newDurability >= heldItem.getType().getMaxDurability()) {
-            player.setItemInHand(null); // tool breaks
-        } else {
-            heldItem.setDurability(newDurability);
-            player.setItemInHand(heldItem);
-        }
     }
 
     /**

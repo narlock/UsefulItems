@@ -8,7 +8,7 @@ features:
 # Enable or disable certain blocks for decrafter feature
 # Note: disabling decrafter in features.decrafter will disable all blocks!
 decrafter-blocks:
-  dispenser: false
+  dispenser: true
   sandstone: true
   noteblock: true
   bed: true
@@ -32,6 +32,8 @@ decrafter-blocks:
   redstone_repeater_off: true
   redstone_repeater_on: true
   double_stone_slab: true
+  boat: true
+  minecart: true
 
 # Enable or disable certain blocks for silktouch feature
 # Note: disabling silktouch in features.silktouch will disable all blocks!

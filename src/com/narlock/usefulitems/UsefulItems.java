@@ -2,13 +2,14 @@ package com.narlock.usefulitems;
 
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.DecrafterListener;
+import com.narlock.usefulitems.listeners.DecrafterVehicleListener;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
-import static com.narlock.usefulitems.util.Constants.TITLE;
+import static com.narlock.usefulitems.util.Utils.TITLE;
 
 /**
  * Main plugin class
@@ -32,8 +33,10 @@ public class UsefulItems extends JavaPlugin {
 
         // Register decrafter feature if enabled
         if (configManager.isFeatureEnabled("decrafter")) {
-            pluginManager.registerEvent(
-                    Event.Type.BLOCK_BREAK, new DecrafterListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(Event.Type.BLOCK_BREAK,
+                    new DecrafterListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(Event.Type.VEHICLE_DESTROY,
+                    new DecrafterVehicleListener(this), Event.Priority.Normal, this);
             logger.info(TITLE + "Decrafter Feature enabled.");
         } else {
             logger.warning(TITLE + "Decrafter Feature is disabled.");

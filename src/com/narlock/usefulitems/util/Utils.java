@@ -1,9 +1,12 @@
 package com.narlock.usefulitems.util;
 
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Constants {
+public class Utils {
     public static final String TITLE = "[UsefulItems] ";
     private static final Map<String, Integer> BLOCK_NAME_TO_ID = new HashMap<>();
 
@@ -60,4 +63,13 @@ public class Constants {
         return null;
     }
 
+    public static void applyToolDurability(Player player, ItemStack heldItem) {
+        short newDurability = (short) (heldItem.getDurability() + 1);
+        if (newDurability >= heldItem.getType().getMaxDurability()) {
+            player.setItemInHand(null); // tool breaks
+        } else {
+            heldItem.setDurability(newDurability);
+            player.setItemInHand(heldItem);
+        }
+    }
 }

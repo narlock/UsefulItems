@@ -10,8 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.logging.Logger;
 
-import static com.narlock.usefulitems.util.Constants.BLOCK_NAME_BY_ID;
-import static com.narlock.usefulitems.util.Constants.TITLE;
+import static com.narlock.usefulitems.util.Utils.BLOCK_NAME_BY_ID;
+import static com.narlock.usefulitems.util.Utils.TITLE;
 
 /**
  * Manages blacklist words, configurations
