@@ -3,6 +3,7 @@ package com.narlock.usefulitems;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.DecrafterListener;
 import com.narlock.usefulitems.listeners.DecrafterVehicleListener;
+import com.narlock.usefulitems.listeners.SilkTouchListener;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -40,6 +41,15 @@ public class UsefulItems extends JavaPlugin {
             logger.info(TITLE + "Decrafter Feature enabled.");
         } else {
             logger.warning(TITLE + "Decrafter Feature is disabled.");
+        }
+
+        // Register silk touch feature if enabled
+        if (configManager.isFeatureEnabled("silktouch")) {
+            pluginManager.registerEvent(Event.Type.BLOCK_BREAK,
+                    new SilkTouchListener(this), Event.Priority.Normal, this);
+            logger.info(TITLE + "Silk Touch Feature enabled.");
+        } else {
+            logger.warning(TITLE + "Silk Touch Features is disabled.");
         }
 
         logger.info(TITLE + "UsefulItems " + getDescription().getVersion() + " finished enabling.");

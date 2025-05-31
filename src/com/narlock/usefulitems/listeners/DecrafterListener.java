@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.narlock.usefulitems.util.Utils.applyToolDurability;
+import static com.narlock.usefulitems.util.Utils.GoldToolType;
 
 /**
  * Handles gold tool decrafting
@@ -93,29 +94,6 @@ public class DecrafterListener extends BlockListener {
 
         public ItemStack[] getDrops() {
             return drops;
-        }
-    }
-
-
-    public enum GoldToolType {
-        GOLD_PICKAXE(285),
-        GOLD_AXE(286),
-        GOLD_SHOVEL(284),
-        GOLD_HOE(294),
-        GOLD_SWORD(283);
-
-        private final int id;
-
-        GoldToolType(int id) {
-            this.id = id;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public static boolean matches(GoldToolType toolType, int itemId) {
-            return toolType.getId() == itemId;
         }
     }
 

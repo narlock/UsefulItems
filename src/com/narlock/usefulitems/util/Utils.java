@@ -58,6 +58,28 @@ public class Utils {
         BLOCK_NAME_TO_ID.put("glowstone", 89);
     }
 
+    public enum GoldToolType {
+        GOLD_PICKAXE(285),
+        GOLD_AXE(286),
+        GOLD_SHOVEL(284),
+        GOLD_HOE(294),
+        GOLD_SWORD(283);
+
+        private final int id;
+
+        GoldToolType(int id) {
+            this.id = id;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        public static boolean matches(GoldToolType toolType, int itemId) {
+            return toolType.getId() == itemId;
+        }
+    }
+
     public static String BLOCK_NAME_BY_ID(int blockId) {
         for (Map.Entry<String, Integer> entry : BLOCK_NAME_TO_ID.entrySet()) {
             if (entry.getValue() == blockId) {
