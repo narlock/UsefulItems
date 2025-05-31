@@ -1,0 +1,14 @@
+name: UsefulItems
+main: com.narlock.usefulitems.UsefulItems
+version: 1.0
+author: narlock
+description: Gives use to some of the less useful items
+commands:
+  craft:
+    description: Craft previously unobtainable items using special recipes.
+    usage: /<command> <item>
+    permission: usefulitems.craft
+  reloadusefulitems:
+    description: Reload the UsefulItems plugin configuration.
+    usage: /<command>
+    permission: usefulitems.reload
