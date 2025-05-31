@@ -3,6 +3,25 @@ There are a small amount of different items and blocks within Minecraft Beta 1.7
 
 ## Installation
 
+### Option 1: JAR Download (Non-technical)
+The [Releases](https://github.com/narlock/UsefulItems/releases) page on GitHub will provide versioned JAR files based on the version of the plugin.
+1. Download the `UsefulItems.jar` file from the version of your choice.
+2. Drop the `UsefulItems.jar` file into your `plugins` directory of your server.
+3. Reload/Restart your server.
+
+### Option 2: Build the JAR Yourself (Technical)
+1. Clone the GitHub Repository.
+2. Add your Craftbukkit's JAR file as a library.
+3. Build the JAR file.
+4. Drag the JAR file into your `plugins` directory of your server.
+5. Reload/Restart your server.
+
+Upon reload/restart, you will see a message similar to this in your server's log:
+```
+[INFO] [UsefulItems] UsefulItems X.X enabled.
+```
+To verify installation, check that "UsefulItems" appears in your plugins list by using the `/plugins` command while in-game.
+
 ## Modifications
 
 ### Golden Tools
@@ -91,3 +110,6 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
 - When stairs are broken, they will drop the actual stair block when broken with any Pickaxe/Axe.
 
 ## Demo
+
+> [!WARNING]
+> This section is currently in-progress!
