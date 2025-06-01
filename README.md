@@ -187,4 +187,4 @@ Bookshelf Data is stored in the `bookshelf` directory. Each world will have a JS
 ### Known Conflicts
 The following section contains other plugin conflicts that I have discovered while testing UsefulItems. This section offers future opportunities to help allow UsefulItems to work nicely with other plugins.
 
-1. When using this plugin with [Dynmap](https://github.com/webbukkit/Dynmap), blocks mined with Decraft or Silk features will not update the web map.
+1. When using this plugin with [Dynmap](https://github.com/webbukkit/Dynmap), blocks mined with Decraft, Silk, or stair-breaking features will not update the web map.
