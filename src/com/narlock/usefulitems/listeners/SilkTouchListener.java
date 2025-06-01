@@ -1,7 +1,10 @@
 package com.narlock.usefulitems.listeners;
 
 import com.narlock.usefulitems.UsefulItems;
+import com.narlock.usefulitems.config.BookshelfNoteManager;
 import com.narlock.usefulitems.util.PermissionsUtil;
+import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -10,9 +13,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
-import static com.narlock.usefulitems.util.Utils.GoldToolType;
-import static com.narlock.usefulitems.util.Utils.applyToolDurability;
+import static com.narlock.usefulitems.util.Utils.*;
 
 /**
  * Handles gold tool silk touch drops
@@ -20,11 +23,14 @@ import static com.narlock.usefulitems.util.Utils.applyToolDurability;
  * @author narlock
  */
 public class SilkTouchListener extends BlockListener {
+    private static final Logger logger = Logger.getLogger("Minecraft.UsefulItems");
     private final UsefulItems plugin;
+    private final BookshelfNoteManager bookshelfNoteManager;
     private final Map<Integer, GoldToolType> silkTouchRules = new HashMap<>();
 
     public SilkTouchListener(UsefulItems plugin) {
         this.plugin = plugin;
+        this.bookshelfNoteManager = plugin.getBookshelfNoteManager();
         initializeSilkTouchRules();
     }
 
@@ -58,6 +64,10 @@ public class SilkTouchListener extends BlockListener {
 
         // Apply silk touch logic
         event.setCancelled(true);
+
+        // Check for conflicts
+        conflictCheck(event);
+
         block.setTypeId(0); // Remove the block
 
         // Drop the item
@@ -82,5 +92,26 @@ public class SilkTouchListener extends BlockListener {
         silkTouchRules.put(79, GoldToolType.GOLD_PICKAXE); // Ice
         silkTouchRules.put(80, GoldToolType.GOLD_SHOVEL); // Snow Block
         silkTouchRules.put(89, GoldToolType.GOLD_PICKAXE); // Glowstone
+    }
+
+    /**
+     * Checks for conflicts with existing events.
+     * For example, bookshelf note breaking needs to be addressed.
+     * @param event the BlockBreakEvent
+     */
+    public void conflictCheck(BlockBreakEvent event) {
+        Player player = event.getPlayer();
+        Block block = event.getBlock();
+        Location blockLocation = block.getLocation();
+
+        // Checks for bookshelf breaking to ensure notes are removed from the bookshelf
+        if (block.getType() == Material.BOOKSHELF && bookshelfNoteManager.getNoteAt(blockLocation) != null) {
+            // Remove the note from the bookshelf regardless of permission (isOp = true)
+            bookshelfNoteManager.removeNoteAt(blockLocation, player.getName(), true);
+            logger.info(TITLE + "Bookshelf note removed at "
+                    + blockLocation.getBlockX() + ", "
+                    + blockLocation.getBlockY() + ", "
+                    + blockLocation.getBlockZ());
+        }
     }
 }

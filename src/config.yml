@@ -5,6 +5,7 @@ features:
   silktouch: true
   extendedcrafting: true
   enhanceditems: true
+  bookshelfnotes: true
 
 # Enable or disable certain blocks for decrafter feature
 # Note: disabling decrafter in features.decrafter will disable all blocks!
@@ -75,6 +76,8 @@ enhanceditems:
     protection-duration: 2 # seconds (per feather use)
   fireball:
     cooldown: 5  # seconds
+  bookshelf-notes:
+    auto-protect: true # Protects the note, not the bookshelf itself
 
 # Other Enhancements
 stairs-drop-stairs: true

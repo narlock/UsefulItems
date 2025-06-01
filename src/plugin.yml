@@ -15,6 +15,11 @@ commands:
     usage: /<command>
     permission: usefulitems.reload
 
+  note:
+    description: Set a note on a bookshelf.
+    usage: /note <message>
+    permission: usefulitems.note
+
 permissions:
   usefulitems.craft:
     description: Allows the player to use the /craft command.
@@ -38,4 +43,8 @@ permissions:
 
   usefulitems.enhanceditems:
     description: Allows the player to use enhanced item effects (e.g., milkbucket god mode, sugar breathing).
+    default: true
+
+  usefulitems.note:
+    description: Allows the player to set notes on bookshelves.
     default: true

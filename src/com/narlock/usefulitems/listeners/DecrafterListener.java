@@ -1,7 +1,9 @@
 package com.narlock.usefulitems.listeners;
 
 import com.narlock.usefulitems.UsefulItems;
+import com.narlock.usefulitems.config.BookshelfNoteManager;
 import com.narlock.usefulitems.util.PermissionsUtil;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -11,9 +13,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
-import static com.narlock.usefulitems.util.Utils.applyToolDurability;
-import static com.narlock.usefulitems.util.Utils.GoldToolType;
+import static com.narlock.usefulitems.util.Utils.*;
 
 /**
  * Handles gold tool decrafting
@@ -59,7 +61,9 @@ public class DecrafterListener extends BlockListener {
 
         // Apply decrafting logic
         event.setCancelled(true);
-        block.setTypeId(0); // Removes the block
+
+        // Removes the block
+        block.setTypeId(0);
 
         // Drop items
         for (ItemStack drop : rule.getDrops()) {

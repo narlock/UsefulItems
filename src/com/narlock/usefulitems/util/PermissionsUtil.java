@@ -28,4 +28,8 @@ public class PermissionsUtil {
     public static boolean canReload(Player player) {
         return player.hasPermission(PREFIX + "reload");
     }
+
+    public static boolean canUseBookshelfNotes(Player player) {
+        return player.hasPermission(PREFIX + "note");
+    }
 }

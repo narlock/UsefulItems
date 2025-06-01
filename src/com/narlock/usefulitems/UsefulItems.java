@@ -1,7 +1,9 @@
 package com.narlock.usefulitems;
 
+import com.narlock.usefulitems.commands.BookshelfNoteCommand;
 import com.narlock.usefulitems.commands.CraftCommand;
 import com.narlock.usefulitems.commands.ReloadCommand;
+import com.narlock.usefulitems.config.BookshelfNoteManager;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.*;
 import com.narlock.usefulitems.util.ProtectionManager;
@@ -22,6 +24,7 @@ public class UsefulItems extends JavaPlugin {
     private static final Logger logger = Logger.getLogger("Minecraft.UsefulItems");
     private ConfigManager configManager;
     private ProtectionManager protectionManager;
+    private BookshelfNoteManager bookshelfNoteManager;
 
     @Override
     public void onEnable() {
@@ -32,6 +35,7 @@ public class UsefulItems extends JavaPlugin {
 
         // Initialize configuration manager
         this.configManager = new ConfigManager(this);
+        this.bookshelfNoteManager = new BookshelfNoteManager(this);
         PluginManager pluginManager = getServer().getPluginManager();
 
         // Register decrafter feature if enabled
@@ -69,6 +73,21 @@ public class UsefulItems extends JavaPlugin {
                     new EnhancedItemPlayerListener(this), Event.Priority.Normal, this);
             pluginManager.registerEvent(Event.Type.ENTITY_DAMAGE,
                     new EnhancedItemDamageListener(this), Event.Priority.Normal, this);
+            logger.info(TITLE + "Enhanced Items Feature is enabled.");
+        } else {
+            logger.warning(TITLE + "Enhanced Items Feature is disabled.");
+        }
+
+        // Register Bookshelf Note Feature
+        if(configManager.isFeatureEnabled("bookshelfnotes")) {
+            getCommand("note").setExecutor(new BookshelfNoteCommand(this));
+            pluginManager.registerEvent(Event.Type.PLAYER_INTERACT,
+                    new BookshelfNoteListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(Event.Type.BLOCK_BREAK,
+                    new BookshelfNoteBlockListener(this), Event.Priority.Normal, this);
+            logger.info(TITLE + "Bookshelf Notes Feature enabled.");
+        } else {
+            logger.warning(TITLE + "Bookshelf Notes Feature is disabled.");
         }
 
         // Register Enhanced Block listener
@@ -96,5 +115,9 @@ public class UsefulItems extends JavaPlugin {
 
     public ProtectionManager getProtectionManager() {
         return protectionManager;
+    }
+
+    public BookshelfNoteManager getBookshelfNoteManager() {
+        return bookshelfNoteManager;
     }
 }
