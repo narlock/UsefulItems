@@ -71,6 +71,8 @@ enhanceditems:
     godmode-duration: 5  # seconds
   sugar:
     suffocation-duration: 3  # seconds (per sugar use)
+  feather:
+    protection-duration: 2 # seconds (per feather use)
   fireball:
     cooldown: 5  # seconds
 

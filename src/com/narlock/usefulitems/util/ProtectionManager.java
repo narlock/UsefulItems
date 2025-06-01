@@ -20,6 +20,7 @@ public class ProtectionManager {
 
     Set<String> godModePlayers = new HashSet<>();
     Map<String, Long> suffocationProtectionEnd = new HashMap<>(); // username, time remaining in ms
+    Map<String, Long> fallDamageProtectionEnd = new HashMap<>(); // username, time remaining in ms
 
     public ProtectionManager(UsefulItems plugin) {
         this.plugin = plugin;
@@ -71,6 +72,23 @@ public class ProtectionManager {
 
     public long getRemainingSuffocationTime(String playerName) {
         long end = suffocationProtectionEnd.getOrDefault(playerName, 0L);
+        long remaining = end - System.currentTimeMillis();
+        return Math.max(0, remaining);
+    }
+
+    public void addFallDamageProtection(String playerName, int additionalSeconds) {
+        long currentEnd = fallDamageProtectionEnd.getOrDefault(playerName, System.currentTimeMillis());
+        long newEnd = Math.max(currentEnd, System.currentTimeMillis()) + additionalSeconds * 1000L;
+        fallDamageProtectionEnd.put(playerName, newEnd);
+    }
+
+    public boolean hasFallDamageProtection(String playerName) {
+        Long endTime = fallDamageProtectionEnd.get(playerName);
+        return endTime != null && System.currentTimeMillis() < endTime;
+    }
+
+    public long getRemainingFallDamageProtectionTime(String playerName) {
+        long end = fallDamageProtectionEnd.getOrDefault(playerName, 0L);
         long remaining = end - System.currentTimeMillis();
         return Math.max(0, remaining);
     }

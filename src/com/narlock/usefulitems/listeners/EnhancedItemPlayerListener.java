@@ -65,5 +65,26 @@ public class EnhancedItemPlayerListener extends PlayerListener {
             }
             event.setCancelled(true);
         }
+
+        // Feather → Fall Damage Protection
+        if (type == Material.FEATHER) {
+            if (!plugin.getConfigManager().isFeatureEnabled("enhanceditems")) return;
+
+            int duration = plugin.getConfigManager().getEnhancedItemSetting("feather", "protection-duration", 2);
+
+            protectionManager.addFallDamageProtection(player.getName(), duration);
+            long remaining = protectionManager.getRemainingFallDamageProtectionTime(player.getName());
+
+            player.sendMessage("§aYou gained fall damage protection! Time remaining: " + (remaining / 1000) + " seconds.");
+
+            // Use 1 feather
+            int amount = heldItem.getAmount();
+            if (amount <= 1) {
+                player.setItemInHand(null);
+            } else {
+                heldItem.setAmount(amount - 1);
+            }
+            event.setCancelled(true);
+        }
     }
 }

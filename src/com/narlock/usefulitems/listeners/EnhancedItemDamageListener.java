@@ -34,6 +34,13 @@ public class EnhancedItemDamageListener extends EntityListener {
             return;
         }
 
+        // Check fall damage protection
+        if (protectionManager.hasFallDamageProtection(playerName) &&
+                (event.getCause() == EntityDamageEvent.DamageCause.FALL)) {
+            event.setCancelled(true);
+            return;
+        }
+
         // Check chainmail fire protection
         if (protectionManager.hasFullChainmail(player) &&
                 (event.getCause() == EntityDamageEvent.DamageCause.FIRE ||
