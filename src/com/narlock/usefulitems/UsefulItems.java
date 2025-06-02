@@ -6,6 +6,7 @@ import com.narlock.usefulitems.commands.ReloadCommand;
 import com.narlock.usefulitems.config.BookshelfNoteManager;
 import com.narlock.usefulitems.config.ConfigManager;
 import com.narlock.usefulitems.listeners.*;
+import com.narlock.usefulitems.util.CooldownManager;
 import com.narlock.usefulitems.util.ProtectionManager;
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
@@ -25,6 +26,7 @@ public class UsefulItems extends JavaPlugin {
     private ConfigManager configManager;
     private ProtectionManager protectionManager;
     private BookshelfNoteManager bookshelfNoteManager;
+    private CooldownManager cooldownManager;
 
     @Override
     public void onEnable() {
@@ -69,10 +71,15 @@ public class UsefulItems extends JavaPlugin {
         // Register Enhanced Item Listener
         if(configManager.isFeatureEnabled("enhancedItems")) {
             this.protectionManager = new ProtectionManager(this);
+            this.cooldownManager = new CooldownManager(this);
             pluginManager.registerEvent(Event.Type.PLAYER_INTERACT,
                     new EnhancedItemPlayerListener(this), Event.Priority.Normal, this);
             pluginManager.registerEvent(Event.Type.ENTITY_DAMAGE,
                     new EnhancedItemDamageListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(Event.Type.PLAYER_INTERACT,
+                    new FireballCastingListener(this), Event.Priority.Normal, this);
+            pluginManager.registerEvent(Event.Type.BLOCK_DISPENSE,
+                    new FireballDispenserListener(), Event.Priority.Normal, this);
             logger.info(TITLE + "Enhanced Items Feature is enabled.");
         } else {
             logger.warning(TITLE + "Enhanced Items Feature is disabled.");
@@ -119,5 +126,9 @@ public class UsefulItems extends JavaPlugin {
 
     public BookshelfNoteManager getBookshelfNoteManager() {
         return bookshelfNoteManager;
+    }
+
+    public CooldownManager getCooldownManager() {
+        return cooldownManager;
     }
 }

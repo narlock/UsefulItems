@@ -166,8 +166,17 @@ Bookshelf Data is stored in the `bookshelf` directory. Each world will have a JS
   <img src="/demo/bookshelf_note_demo.gif" alt="Bookshelf Note Demo">
 </p>
 
-- (Not Implemented) Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
-- (Not Implemented) Dispenser Fireball: If Fire block is in the dispenser, the dispenser will shoot a fireball.
+- Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
+
+<p align="center">
+  <img src="/demo/fireball_cast_demo.gif" alt="Fireball Demo">
+</p>
+
+- Dispenser Fireball: If Fire block is in the dispenser, the dispenser will shoot a fireball.
+
+<p align="center">
+  <img src="/demo/dispenser_fireball_demo.gif" alt="Dispenser Fireball Demo">
+</p>
 
 ### Other Enhancements
 - When stairs are broken, they will drop the actual stair block. Stone stairs will only drop when using a Pickaxe.
