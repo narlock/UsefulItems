@@ -132,7 +132,7 @@ Similar to the Gold tools, I wanted to enhance what some items can use. For exam
   <img src="/demo/feather_fall_res_demo.gif" alt="Feather Fall Protection Demo">
 </p>
 
-- Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed! Server admins can also blacklist words so that users don't break server rules. Blacklisted words will appear as "*" characters.
+- Bookshelf: Placed bookshelf blocks can have a custom user input string associated to them. When a user right-clicks the bookshelf, the message will be displayed! Server admins can also blacklist words so that users don't break server rules. Blacklisted words will appear as "*" characters. (Blacklisting words is not yet implemented!)
 
 Bookshelf Data is stored in the `bookshelf` directory. Each world will have a JSON file associated to them containing all the bookshelves with notes. A sample file may look like this:
 ```json
@@ -166,7 +166,7 @@ Bookshelf Data is stored in the `bookshelf` directory. Each world will have a JS
   <img src="/demo/bookshelf_note_demo.gif" alt="Bookshelf Note Demo">
 </p>
 
-- Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default. The Gold Sword will also lose 2 durability.
+- Fireball: More use of a Gold Sword, when a player has the Fire block in their inventory, they can right-click a Gold Sword to cast a fireball. This is similar to a Ghast fireball. There is a 5-second cooldown on Fireballs by default.
 
 <p align="center">
   <img src="/demo/fireball_cast_demo.gif" alt="Fireball Demo">
