@@ -1,5 +1,5 @@
 # UsefulItems
-There are a small amount of different items and blocks within Minecraft Beta 1.7.3 compared to the modern version of the game. UsefulItems is a server-side plugin for Craftbukkit to give more use to different items.
+There are a small amount of different items and blocks within Minecraft Beta 1.7.3 compared to the modern version of the game. UsefulItems is a server-side plugin for Bukkit to give more use to different items.
 
 ## Installation
 
@@ -11,7 +11,7 @@ The [Releases](https://github.com/narlock/UsefulItems/releases) page on GitHub w
 
 ### Option 2: Build the JAR Yourself (Technical)
 1. Clone the GitHub Repository.
-2. Add your Craftbukkit's JAR file as a library.
+2. Add your CraftBukkit's JAR file as a library.
 3. Build the JAR file.
 4. Drag the JAR file into your `plugins` directory of your server.
 5. Reload/Restart your server.
