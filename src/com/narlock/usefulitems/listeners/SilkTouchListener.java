@@ -80,6 +80,7 @@ public class SilkTouchListener extends BlockListener {
 
     public void initializeSilkTouchRules() {
         silkTouchRules.put(1, GoldToolType.GOLD_PICKAXE); // Stone
+        silkTouchRules.put(2, GoldToolType.GOLD_SHOVEL); // Grass
         silkTouchRules.put(16, GoldToolType.GOLD_PICKAXE); // Coal Ore
         silkTouchRules.put(20, GoldToolType.GOLD_PICKAXE); // Glass
         silkTouchRules.put(21, GoldToolType.GOLD_PICKAXE); // Lapis Ore

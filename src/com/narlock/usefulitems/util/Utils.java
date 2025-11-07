@@ -45,6 +45,7 @@ public class Utils {
 
         // Silktouch blocks
         BLOCK_NAME_TO_ID.put("stone", 1);
+        BLOCK_NAME_TO_ID.put("grass", 2);
         BLOCK_NAME_TO_ID.put("coal_ore", 16);
         BLOCK_NAME_TO_ID.put("glass", 20);
         BLOCK_NAME_TO_ID.put("lapis_ore", 21);
