@@ -55,7 +55,8 @@ public class SilkTouchListener extends BlockListener {
         int heldItemId = heldItem.getTypeId();
         GoldToolType goldToolType = silkTouchRules.get(blockId);
 
-        // Exit if no gold tool enabled silk touch for block, or block is disabled in config
+        // Exit if no gold tool enabled silk touch for block, or block is disabled in
+        // config
         if (goldToolType == null
                 || !GoldToolType.matches(goldToolType, heldItemId)
                 || !plugin.getConfigManager().isSilkTouchBlockEnabled(blockId)) {
@@ -80,6 +81,7 @@ public class SilkTouchListener extends BlockListener {
 
     public void initializeSilkTouchRules() {
         silkTouchRules.put(1, GoldToolType.GOLD_PICKAXE); // Stone
+        silkTouchRules.put(2, GoldToolType.GOLD_SHOVEL); // Grass
         silkTouchRules.put(16, GoldToolType.GOLD_PICKAXE); // Coal Ore
         silkTouchRules.put(20, GoldToolType.GOLD_PICKAXE); // Glass
         silkTouchRules.put(21, GoldToolType.GOLD_PICKAXE); // Lapis Ore
@@ -97,6 +99,7 @@ public class SilkTouchListener extends BlockListener {
     /**
      * Checks for conflicts with existing events.
      * For example, bookshelf note breaking needs to be addressed.
+     * 
      * @param event the BlockBreakEvent
      */
     public void conflictCheck(BlockBreakEvent event) {
