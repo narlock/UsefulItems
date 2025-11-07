@@ -104,8 +104,7 @@ public class Utils {
     public static final List<Integer> PICKAXE_TOOL_IDS = Arrays.asList(257, 270, 274, 278, 285);
 
     public static boolean isTool(ItemStack item) {
-        if (item == null)
-            return false;
+        if (item == null) return false;
 
         Material type = item.getType();
 
